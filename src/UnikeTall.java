@@ -62,10 +62,6 @@ public class UnikeTall {
 
     // Metode som finner og returnerer det største tallet i arrayet.
     public int finnStorsteTall() {
-        if (array.length == 0) {
-            throw new IllegalStateException("Arrayet er tomt.");
-        }
-
         int storsteTall = array[0];
 
         for (int i = 1; i < array.length; i++) {
@@ -80,10 +76,6 @@ public class UnikeTall {
     /*  Metode som beregner og returnerer den gjennomstnittlige verdien
      (double-verdi) av tallene i arrayet.  */
     public double beregnGjennomsnitt() {
-        if (array.length == 0) {
-            throw new IllegalStateException("Arrayet er tomt.");
-        }
-
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
@@ -100,11 +92,6 @@ public class UnikeTall {
      Legg inn mellomrom mellom tallene og skriv ut et passende antall tall
      per linje. */
     public void visTallIMeldingsboks() {
-        if (array.length == 0) {
-            JOptionPane.showMessageDialog(null, "Arrayet er tomt.");
-            return;
-        }
-
         int minsteTall = finnMinsteTall();
         int storsteTall = finnStorsteTall();
         double gjennomsnitt = beregnGjennomsnitt();
